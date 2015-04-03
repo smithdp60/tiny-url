@@ -1,0 +1,13 @@
+<% include partials/header %>
+
+<div class="container">
+  <h2>Shorten a URL</h2>
+  <form class="form form-inline" action="/links" method="post">
+    <div class="form-group">
+      <input type="text" name="url" class="form-control" placeholder="Search for a movie">
+    </div>
+    <input type="submit" value="Shorten" class="btn btn-primary">
+  </form>
+</div>
+
+<% include partials/footer %>
