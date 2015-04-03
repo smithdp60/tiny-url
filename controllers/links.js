@@ -12,9 +12,11 @@ router.post("/", function(req, res) {
     var hash = hashids.encode(data.id);
     data.hash = hash;
     data.save().then(function(taco) {
-      res.render("links/index", {taco: data.hash})
+      res.render("links/index", {taco: req.header.host + "/" +data.hash})
     });
   })
 });
 
 module.exports = router;
+
+// req.headers.host
